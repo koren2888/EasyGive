@@ -1,14 +1,12 @@
 package com.example.easygive;
 
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -34,12 +32,8 @@ public class ItemsFragment extends Fragment {
         ItemsRecyclerAdapter adapter = new ItemsRecyclerAdapter(getLayoutInflater(), items);
         list.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new ItemsRecyclerAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(int pos) {
-                Log.d("TAG", "Row was clicked " + pos);
-            }
-        });
+        adapter.setOnItemClickListener(pos -> Navigation.findNavController(view)
+                .navigate(R.id.action_global_itemFragment));
         return view;
     }
 }

@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.easygive.model.Item;
+import com.example.easygive.model.Model;
 
 import java.util.List;
 
@@ -30,12 +31,9 @@ class ItemViewHolder extends RecyclerView.ViewHolder {
         locationTv = itemView.findViewById(R.id.itemRow_location_value);
         favoriteIcon = itemView.findViewById(R.id.itemRow_favorite_icon);
 
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int pos = getAdapterPosition();
-                listener.onItemClick(pos);
-            }
+        itemView.setOnClickListener(view -> {
+            int pos = getAdapterPosition();
+            listener.onItemClick(pos);
         });
     }
 
@@ -53,12 +51,9 @@ class ItemViewHolder extends RecyclerView.ViewHolder {
         locationTv.setText(item.location);
         updateFavoriteIcon(item);
 
-        favoriteIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                item.isFavorite = !item.isFavorite;
-                updateFavoriteIcon(item);
-            }
+        favoriteIcon.setOnClickListener(view -> {
+            Model.instance().updateFavorites(item);
+            updateFavoriteIcon(item);
         });
     }
 }
