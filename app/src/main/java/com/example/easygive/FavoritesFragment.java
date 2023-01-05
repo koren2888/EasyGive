@@ -14,6 +14,7 @@ import androidx.core.view.MenuProvider;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Lifecycle;
+import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -59,8 +60,10 @@ public class FavoritesFragment extends Fragment {
         ItemsRecyclerAdapter adapter = new ItemsRecyclerAdapter(getLayoutInflater(), items);
         list.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(pos -> Navigation.findNavController(view)
-                .navigate(R.id.action_global_itemFragment));
+        adapter.setOnItemClickListener(pos -> {
+            NavDirections action = FavoritesFragmentDirections.actionGlobalItemFragment(pos);
+            Navigation.findNavController(view).navigate(action);
+        });
         return view;
     }
 }

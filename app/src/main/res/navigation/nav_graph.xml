@@ -14,7 +14,11 @@
         android:id="@+id/itemFragment"
         android:name="com.example.easygive.ItemFragment"
         android:label="Item"
-        tools:layout="@layout/fragment_item" />
+        tools:layout="@layout/fragment_item" >
+        <argument
+            android:name="itemPos"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.example.easygive.FavoritesFragment"

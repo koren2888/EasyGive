@@ -20,13 +20,13 @@
             app:srcCompat="@drawable/sofa_example" />
 
         <ImageView
-            android:id="@+id/item_favorite_icon"
+            android:id="@+id/favorite_icon"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/itemRow_image"
+            app:layout_constraintEnd_toEndOf="@+id/item_image"
+            app:layout_constraintTop_toTopOf="@+id/item_image"
             app:srcCompat="@drawable/empty_heart_icon" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,7 +38,7 @@
             app:layout_constraintTop_toBottomOf="@+id/item_image">
 
             <TextView
-                android:id="@+id/item_type_tag"
+                android:id="@+id/type_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Type:"
@@ -48,82 +48,82 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/item_type_value"
+                android:id="@+id/type_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="TextView"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/item_type_tag"
-                app:layout_constraintStart_toEndOf="@+id/item_type_tag"
-                app:layout_constraintTop_toTopOf="@+id/item_type_tag" />
+                app:layout_constraintBottom_toBottomOf="@+id/type_tag"
+                app:layout_constraintStart_toEndOf="@+id/type_tag"
+                app:layout_constraintTop_toTopOf="@+id/type_tag" />
 
             <TextView
-                android:id="@+id/item_condition_tag"
+                android:id="@+id/condition_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Condition:"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_type_tag" />
+                app:layout_constraintTop_toBottomOf="@+id/type_tag" />
 
             <TextView
-                android:id="@+id/item_condition_value"
+                android:id="@+id/condition_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="TextView"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/item_condition_tag"
-                app:layout_constraintStart_toEndOf="@+id/item_condition_tag"
-                app:layout_constraintTop_toTopOf="@+id/item_condition_tag" />
+                app:layout_constraintBottom_toBottomOf="@+id/condition_tag"
+                app:layout_constraintStart_toEndOf="@+id/condition_tag"
+                app:layout_constraintTop_toTopOf="@+id/condition_tag" />
 
             <TextView
-                android:id="@+id/item_location_tag"
+                android:id="@+id/location_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Location:"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_condition_tag" />
+                app:layout_constraintTop_toBottomOf="@+id/condition_tag" />
 
             <TextView
-                android:id="@+id/item_location_value"
+                android:id="@+id/location_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="TextView"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/item_location_tag"
-                app:layout_constraintStart_toEndOf="@+id/item_location_tag"
-                app:layout_constraintTop_toTopOf="@+id/item_location_tag" />
+                app:layout_constraintBottom_toBottomOf="@+id/location_tag"
+                app:layout_constraintStart_toEndOf="@+id/location_tag"
+                app:layout_constraintTop_toTopOf="@+id/location_tag" />
 
             <TextView
-                android:id="@+id/item_contact_tag"
+                android:id="@+id/contact_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contact:"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_location_tag" />
+                app:layout_constraintTop_toBottomOf="@+id/location_tag" />
 
             <TextView
-                android:id="@+id/item_contact_value"
+                android:id="@+id/contact_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="TextView"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="@+id/item_contact_tag"
-                app:layout_constraintStart_toEndOf="@+id/item_contact_tag"
-                app:layout_constraintTop_toTopOf="@+id/item_contact_tag" />
+                app:layout_constraintBottom_toBottomOf="@+id/contact_tag"
+                app:layout_constraintStart_toEndOf="@+id/contact_tag"
+                app:layout_constraintTop_toTopOf="@+id/contact_tag" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

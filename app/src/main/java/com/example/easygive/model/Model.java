@@ -29,6 +29,10 @@ public class Model {
         return itemsList;
     }
 
+    public Item getItem(int pos) {
+        return itemsList.get(pos);
+    }
+
     public void updateFavorites(Item item) {
         if (!item.isFavorite) {
             favoriteItems.put(item.id, item);
