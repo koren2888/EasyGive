@@ -29,6 +29,10 @@ public class Model {
         return itemsList;
     }
 
+    public List<Item> getMyItems() {
+        return itemsList;
+    }
+
     public Item getItem(int pos) {
         return itemsList.get(pos);
     }

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,6 +29,9 @@ public class ItemsFragment extends Fragment {
         items = Model.instance().getAllItems();
         RecyclerView list = view.findViewById(R.id.items_list);
         list.setHasFixedSize(true);
+        DividerItemDecoration listDivider = new DividerItemDecoration(list.getContext(),
+                DividerItemDecoration.VERTICAL);
+        list.addItemDecoration(listDivider);
 
         list.setLayoutManager(new LinearLayoutManager(getContext()));
         ItemsRecyclerAdapter adapter = new ItemsRecyclerAdapter(getLayoutInflater(), items);

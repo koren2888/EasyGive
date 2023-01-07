@@ -25,4 +25,9 @@
         android:label="Favorites" />
     <action android:id="@+id/action_global_favoritesFragment" app:destination="@id/favoritesFragment" />
     <action android:id="@+id/action_global_itemFragment" app:destination="@id/itemFragment" />
+    <fragment
+        android:id="@+id/myItemsFragment"
+        android:name="com.example.easygive.MyItemsFragment"
+        android:label="My Items" />
+    <action android:id="@+id/action_global_myItemsFragment" app:destination="@id/myItemsFragment" />
 </navigation>
