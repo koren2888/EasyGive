@@ -6,6 +6,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 .findFragmentById(R.id.main_navhost);
         navController = navHostFragment.getNavController();
         NavigationUI.setupActionBarWithNavController(this, navController);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     }
 
     @Override
