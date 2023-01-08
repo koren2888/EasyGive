@@ -30,6 +30,7 @@ public class ItemFragment extends Fragment {
         binding.conditionValue.setText(item.condition);
         binding.locationValue.setText(item.location);
         binding.contactValue.setText(item.contact);
+        updateFavoriteIcon();
 
         binding.favoriteIcon.setOnClickListener(view1 -> {
             Model.instance().updateFavorites(item);
