@@ -115,10 +115,10 @@ public class ItemsFragment extends Fragment {
         itemsToShow.addAll(allItems);
 
         if(!typeFilter.equals(ANY_FILTER))
-            itemsToShow.removeIf(item -> item.item_type != typeFilter);
+            itemsToShow.removeIf(item -> !item.item_type.equals(typeFilter));
         if(!locationFilter.equals(ANY_FILTER))
-            itemsToShow.removeIf(item -> item.location != locationFilter);
+            itemsToShow.removeIf(item -> !item.location.equals(locationFilter));
         if(!conditionFilter.equals(ANY_FILTER))
-            itemsToShow.removeIf(item -> item.condition != conditionFilter);
+            itemsToShow.removeIf(item -> !item.condition.equals(conditionFilter));
     }
 }
