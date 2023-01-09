@@ -1,5 +1,6 @@
 package com.example.easygive.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,7 +17,7 @@ public class Model {
     }
 
     private Model(){
-        itemsList = new LinkedList<>();
+        itemsList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             addItem(new Item(String.valueOf(i), "type " + i,"Good", "Here", "" + i,
                     "", false));
@@ -26,7 +27,7 @@ public class Model {
     }
 
     public List<Item> getAllItems() {
-        return itemsList;
+        return new ArrayList<Item>(itemsList);
     }
 
     public List<Item> getMyItems() {
