@@ -19,8 +19,12 @@ public class Model {
     private Model(){
         itemsList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            addItem(new Item(String.valueOf(i), "type " + i,"Good", "Here", "" + i,
-                    "", false));
+            if(i==2)
+                addItem(new Item(String.valueOf(i), "Gardening","Good", "Here", "" + i,
+                        "", false));
+            else
+                addItem(new Item(String.valueOf(i), "type " + i,"Good", "Here", "" + i,
+                        "", false));
         }
 
         favoriteItems = new HashMap<>();
