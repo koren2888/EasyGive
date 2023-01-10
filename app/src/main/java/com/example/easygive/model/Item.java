@@ -1,13 +1,6 @@
 package com.example.easygive.model;
 
-import androidx.annotation.NonNull;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
-@Entity
 public class Item {
-    @PrimaryKey
-    @NonNull
     public String id;
     public String item_type;
     public String condition;
