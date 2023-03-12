@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,9 +43,9 @@ public class MyItemsFragment extends Fragment {
         MyItemsRecyclerAdapter adapter = new MyItemsRecyclerAdapter(getLayoutInflater(), items);
         recyclerView.setAdapter(adapter);
 
-        binding.addButton.setOnClickListener(clickedView -> {
-            Log.i("TAG", "In adding item");
-        });
+        NavDirections action = MyItemsFragmentDirections.actionGlobalAddItemFragment();
+
+        binding.addButton.setOnClickListener(Navigation.createNavigateOnClickListener(action));
 
         return view;
     }

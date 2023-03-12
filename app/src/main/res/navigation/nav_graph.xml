@@ -30,4 +30,9 @@
         android:name="com.example.easygive.MyItemsFragment"
         android:label="My Items" />
     <action android:id="@+id/action_global_myItemsFragment" app:destination="@id/myItemsFragment" />
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.easygive.AddItemFragment"
+        android:label="Add Item" />
+    <action android:id="@+id/action_global_addItemFragment" app:destination="@id/addItemFragment" />
 </navigation>

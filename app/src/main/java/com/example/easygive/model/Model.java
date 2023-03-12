@@ -1,5 +1,7 @@
 package com.example.easygive.model;
 
+import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -9,8 +11,8 @@ import java.util.Map;
 public class Model {
     private static final Model _instance = new Model();
     private static List<Item> itemsList;
-    private static Map<String, Item> favoriteItems;
-
+    private static Map<Integer, Item> favoriteItems;
+    //private FirebaseModel firebaseModel = new FirebaseModel();
 
     public static Model instance() {
         return _instance;
@@ -20,11 +22,11 @@ public class Model {
         itemsList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             if(i==2)
-                addItem(new Item(String.valueOf(i), "Gardening","Good", "Here", "" + i,
-                        "", false));
+                addItem(new Item("", "Gardening","Good", "Here", "" + i,
+                        "", false), null);
             else
-                addItem(new Item(String.valueOf(i), "type " + i,"Good", "Here", "" + i,
-                        "", false));
+                addItem(new Item("", "type " + i,"Good", "Here", "" + i,
+                        "", false), null);
         }
 
         favoriteItems = new HashMap<>();
@@ -55,7 +57,15 @@ public class Model {
         return new LinkedList<>(favoriteItems.values());
     }
 
-    public void addItem(Item st) {
+    public void addItem(Item st, Listener<Void> listener) {
         itemsList.add(st);
+    }
+
+    public interface Listener<T>{
+        void onComplete(T data);
+    }
+
+    public void uploadImage(String name, Bitmap bitmap, Listener<String> listener) {
+        //firebaseModel.uploadImage(name,bitmap,listener);
     }
 }
